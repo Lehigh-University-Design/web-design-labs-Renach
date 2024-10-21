@@ -1,0 +1,212 @@
+@@ -195,6 +195,32 @@ <h3>Quick Center Trick</h3>
+
+            </div>
+
+            <div class="post">
+
+                <div class="artistcontainer">
+
+                    <div class="artist-info">
+                        <h2>Artist Name</h2>
+                        <img src="images/lightscape.jpg">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque ab, explicabo accusantium accusamus quasi ducimus perferendis ratione velit eos dolorum amet earum expedita obcaecati dolore iste, vero repellendus. Ab, nisi!</p>
+                    </div>
+
+                    <div class="artist-info">
+                        <h2>Artist Name</h2>
+                        <img src="images/lightscape.jpg">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque ab, explicabo accusantium accusamus quasi ducimus perferendis ratione velit eos dolorum amet earum expedita obcaecati dolore iste, vero repellendus. Ab, nisi!</p>
+                    </div>
+
+                    <div class="artist-info">
+                        <h2>Artist Name</h2>
+                        <img src="images/lightscape.jpg">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque ab, explicabo accusantium accusamus quasi ducimus perferendis ratione velit eos dolorum amet earum expedita obcaecati dolore iste, vero repellendus. Ab, nisi!</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </body>
+  83 changes: 83 additions & 0 deletions 83  
+css-lab-5.html
+ 
+Original file line number	Diff line number	Diff line change
+@@ -0,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>CSS Exercise 5: CSS Flexbox</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+
+    <body>
+
+        <main>
+
+            <div id="head">
+                <div><h3><a href="index.html">DES 070 Labs</a></h3></div>
+                <div class="sub-head"><h3>CSS Exercise 5: CSS Flexbox</h3></div>
+            </div>
+
+            <!-- CSS Grid  -->
+
+            <div class="post">
+
+                <h2>CSS Flexbox</h2>
+
+                <div class="flex-grid">
+
+                    <div class="flex-card">
+                        <div class="flex-card-inner">
+                            <div><img src="images/cat.jpg"></div>
+                            <div class="button"><h4>My Cat</h4></div>
+                        </div>
+                    </div>
+
+                    <div class="flex-card">
+                        <div class="flex-card-inner">
+                            <div><img src="images/cat.jpg"></div>
+                            <div class="button"><h4>My Cat</h4></div>
+                        </div>
+                    </div>
+
+                    <div class="flex-card">
+                        <div class="flex-card-inner">
+                            <div><img src="images/cat.jpg"></div>
+                            <div class="button"><h4>My Cat</h4></div>
+                        </div>
+                    </div>
+
+                    <div class="flex-card">
+                        <div class="flex-card-inner">
+                            <div><img src="images/cat.jpg"></div>
+                            <div class="button"><h4>My Cat</h4></div>
+                        </div>
+                    </div>
+
+                    <div class="flex-card">
+                        <div class="flex-card-inner">
+                            <div><img src="images/cat.jpg"></div>
+                            <div class="button"><h4>My Cat</h4></div>
+                        </div>
+                    </div>
+
+                    <div class="flex-card">
+                        <div class="flex-card-inner">
+                            <div><img src="images/cat.jpg"></div>
+                            <div class="button"><h4>My Cat</h4></div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </body>
+
+</html> 
+   50 changes: 49 additions & 1 deletion 50  
+css/style.css
+ 
+Original file line number	Diff line number	Diff line change
+@@ -24,7 +24,7 @@ body {
+main {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto
+  margin: 0 auto;
+}
+
+#head {
+@@ -309,6 +309,23 @@ h2, h3, h4 {
+
+/* CSS Lab 4: Grid */
+
+.artistcontainer {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.artistinfo {
+
+}
+
+.artistinfo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.grid-parent {
+  display: grid;
+  /*grid-template-columns: 25% 75%;*/
+@@ -429,4 +446,35 @@ h2, h3, h4 {
+  background-color: #600060;
+  display: grid;
+  place-content: center; /*start, center, end (shorthand for justify-content with align-content)*/
+}
+
+/*Flex Lab*/
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-card {
+  width: calc(100%/3);
+}
+
+.flex-card-inner {
+  margin: 1em;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  background-color: beige;
+  flex-direction: column;
+  text-align: center;
+  h4{
+    background-color: black;
+    display: inline-block;
+    color: #fff;
+    padding: .25em;
+  }
+  img {
+    border-radius: 50%;
+  }
+} 
+  Binary file added BIN +44.9 KB 
+images/cat.jpg
+ 
+Loading 
+   1 change: 1 addition & 0 deletions 1  
+index.html
+ 
+Original file line number	Diff line number	Diff line change
+@@ -25,6 +25,7 @@ <h2>List of Lab Exercises</h2>
+                <p><a href="css-lab-2.html">Lab 2: SVG</a></p>
+                <p><a href="css-lab-3.html">Lab 3: CSS Display & Position</a></p>
+                <p><a href="css-lab-4.html">Lab 4: CSS Grid</a></p>
+                <p><a href="css-lab-5.html">Lab 5: CSS Flexbox</a></p>
+            </div>
+
+        </main>
+
+        
